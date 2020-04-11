@@ -1,0 +1,94 @@
+.bottom-section {
+    float: left;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 0 30px 5px #efefef;
+    font-size: 12px;
+}
+
+.bottom-section>article {
+    float: left;
+    position: relative;
+}
+
+.bottom-section img {
+    width: 588px;
+    height: 393px;
+    display: block;
+}
+
+.bottom-section h2 {
+    padding: 27px 0 22px 19px;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 20px;
+}
+
+.bottom-section>h2 {
+    font-size: 0;
+    padding: 0;
+    border: 0;
+}
+
+.bottom-section ul {
+    padding-top: 26px;
+}
+
+.bottom-section ul h3 {
+    padding: 0 0 12px 19px;
+    line-height: 1.4;
+}
+
+.bottom-section ul h3 a {
+    color: #000000;
+    font-size: 16px;
+}
+
+.bottom-section a {
+    text-decoration: none;
+    color: #91919f;
+}
+
+.bottom-news-wrapper {
+    padding-bottom: 28px;
+}
+
+
+.bottom-news-wrapper>a {
+    float: left;
+    padding: 0 10px 0 19px;
+}
+
+.bottom-news-wrapper>a::before {
+    content: "/ ";
+}
+
+.bottom-news-wrapper span {
+    padding: 0 0 0 16px;
+    background: url('../img/comment.png') left center no-repeat;
+}
+
+.bottom-news-wrapper time {
+    padding: 0 15px 0 15px;
+    background: url('../img/time.png') left center no-repeat;
+}
+
+.bottom-section .abs-wrapper {
+    bottom: 42px;
+    font-size: 12px;
+}
+
+.abs-wrapper p {
+    font-size: 14px;
+    line-height: 1.45;
+    margin-top: 22px;
+}
+
+.bottom-section .abs-wrapper h3 {
+    padding-right: 150px;
+    margin: 23px 0 12px;
+}
+
+.common-news-wrapper {
+    float: left;
+    width: 412px;
+}

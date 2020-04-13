@@ -18,18 +18,18 @@ address {
     font-style: normal;
 }
 
-address span {
+address a {
     display: block;
     font-size: 18px;
     padding-left: 35px;
 }
 
-address span:first-of-type{
+address a:first-of-type{
     background: url(../img/phone.png) left 5% no-repeat;
     padding-bottom: 24px;
 }
 
-address span:last-of-type{
+address a:last-of-type{
     background: url(../img/email.png) left center no-repeat;
 }
 
@@ -110,7 +110,10 @@ address span:last-of-type{
 .copyright-wrapper {
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
     padding: 17px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.copyright-wrapper small {
+    font-size: 14px;
 }

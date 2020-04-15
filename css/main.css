@@ -24,14 +24,14 @@ aside a:first-of-type img {
     background: #fff;
     box-shadow: 0 0 30px 5px #efefef;
     font-size: 12px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     margin-bottom: 20px;
     float: left;
 }
 
 .left-column ul {
     list-style-type: none;
-    padding: 29px 18px 0 18px;
+    padding: 15px 18px 0 18px;
 }
 
 .left-column h2 {
@@ -41,7 +41,7 @@ aside a:first-of-type img {
 }
 
 .left-column h3 {
-    padding-bottom: 14px;
+    padding-bottom: 6px;
     line-height: 1.45;
 }
 
@@ -57,7 +57,7 @@ aside a:first-of-type img {
 }
 
 .left-news-wrapper {
-    padding-bottom: 22px;
+    padding-bottom: 15px;
 }
 
 .left-news-wrapper>a::before {
@@ -89,6 +89,31 @@ aside a:first-of-type img {
     color: #448ccb;
     text-decoration: none;
     font-size: 14px;
+}
+
+.exchange-wrapper {
+    border-top: 1px solid #e5e5e5;
+    margin-top: 20px;
+}
+
+.exchange-wrapper h3 {
+    margin: 15px 0;
+    padding:0 0 0 17px;
+    font-size: 20px;
+}
+
+.exchange-wrapper p {
+    font-size: 16px;
+    color: #91919f;
+}
+
+.exchange-wrapper span {
+    color: #448ccb;
+}
+
+.exchange-USD, .exchange-EUR {
+ float: left;
+ padding-left: 17px;
 }
 
 .center-column {

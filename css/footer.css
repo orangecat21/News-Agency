@@ -33,9 +33,13 @@ address a:last-of-type{
     background: url(../img/email.png) left center no-repeat;
 }
 
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
 .bottom-nav {
-    float: left;
-    padding-right: 159px;
+    /* padding-right: 159px; */
     font-size: 16px;
 }
 
@@ -56,8 +60,7 @@ address a:last-of-type{
 }
 
 .about {
-    float: left;
-    padding: 5px 172px 0 0;
+    /* padding: 5px 172px 0 0; */
     margin-bottom: 42px;
 }
 
@@ -68,10 +71,6 @@ address a:last-of-type{
 
 .about li:first-of-type {
     padding-left: 0;
-}
-
-.contacts-wrapper {
-    float: left;
 }
 
 .social-links li{
@@ -116,4 +115,23 @@ address a:last-of-type{
 
 .copyright-wrapper small {
     font-size: 14px;
+}
+
+@media (max-width: 850px) {
+    .footer-wrapper {
+        flex-wrap: wrap;
+        /* align-items: center; */
+    }
+
+    .bottom-nav {
+        margin-bottom: 42px;
+    }
+
+    .about {
+        margin-right: 5px;
+    }
+
+    .contacts-wrapper {
+        margin-bottom: 42px;
+    }
 }

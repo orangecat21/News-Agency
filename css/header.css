@@ -4,6 +4,10 @@
     font-family: Arial, sans-serif;
 }
 
+html, body{
+    min-width: 320px;
+}
+
 header {
     box-shadow: 0 0 10px 10px #efefef;
     z-index: 2;
@@ -28,8 +32,9 @@ h1 {
 }
 
 .center-wrapper {
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .upper-bar {
@@ -58,6 +63,10 @@ h1 {
 .logo {
     margin: 40px 0 39px;
     float: left;
+}
+
+.logo-mobile {
+    display: none;
 }
 
 .select-wrapper {
@@ -123,7 +132,7 @@ input[type="search"] {
     right: 0;
     padding-left: 52px;
     float: right;
-    background: url(../img/search.png) center center no-repeat;
+    background: url(../img/search-transparent.png) center center no-repeat;
 }
 
 .temp {
@@ -134,8 +143,218 @@ input[type="search"] {
     background: url(../img/weather.png) left center no-repeat;
 }
 
+.date-mobile {
+    display: none;
+}
+
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
+}
+
+.menu-btn {
+    display: none;
+}
+
+@media (max-width: 950px) {
+    .main-nav a {
+        font-size: 14px;
+    }
+
+    .main-nav li:not(:last-of-type)::after {
+        padding: 0 8px;
+    }
+}
+
+@media (max-width: 850px)  {
+    header {
+        position: relative;
+    }
+
+    h1 {
+        font-size: 13px;
+        padding: 18px 0 20px;
+        text-align: center;
+        float: none;
+    }
+
+    #search {
+        display: none;
+    }
+
+    .select-wrapper {
+        display: none;
+    }
+
+    .upper-bar time {
+        display: none;
+    }
+
+    .lower-bar {
+        padding: 0;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .logo-mobile {
+        display: initial;
+        margin: 20px 0 20px;
+        float: left;
+    }
+
+    .search-btn {
+        top: -30px;
+    }
+
+    .weather-wrapper {
+        position: absolute;
+        top: 150px;
+        left: 20px;
+        right: 20px;
+        z-index: 50;
+        transition: 0.5s ease-in;
+    }
+
+    .weather-wrapper-menu {
+        transform: translateY(350px);
+        transition: 0.5s ease-in;
+    }
+
+    .temp {
+        float: right;
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        background-size: contain;
+    }
+
+    .date-mobile {
+        display: initial;
+        float: left;
+        color: #91919f;
+        margin: 0 auto;
+        padding: 0;
+        font-size: 16px;
+    }
+
+    .date-mobile span{
+        padding: 0 0 0 40px;
+        background: url('../img/time.png') 20% center no-repeat;
+        background-size: contain;
+    }
+
+    .main-nav {
+        height: 350px;
+        background: #fff;
+        position: relative;
+        z-index: 90;
+        overflow: hidden;
+        transition: 0.5s ease-in;
+    }
+
+    .main-nav-expand {
+        height: 0;
+        transition: 0.5s ease-in;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 8px 0;
+        font-size: 18px;
+    }
+    
+    .main-nav li:not(:last-of-type) {
+        border-bottom: 1px solid #cacacaad;
+    }
+
+    .main-nav li {
+        display: block;
+    }
+
+    .main-nav li:not(:last-of-type)::after {
+        content: none;
+        padding: 0;
+    }
+
+
+
+    .menu-btn {
+        width: 30px;
+        height: 30px;
+        display: block;
+        position: relative;
+        z-index: 3;
+        background: none;
+        border: none;
+        float: left;
+        margin: 17px 15px 17px 0;
+    }
+    
+    .menu-btn span, 
+    .menu-btn span::before,
+    .menu-btn span::after  {
+        position: absolute;
+        top: 50%;
+        width: 20px;
+        height: 2px;
+        background-color: #222;
+        margin-top: -1px;
+        left: 50%;
+        margin-left: -10px;
+    }
+    
+    .menu-btn span::before,
+    .menu-btn span::after {
+        content: '';
+        display: block;
+        transition: 0.6s;
+    }
+    
+    .menu-btn-active span {
+        height: 0;
+    }
+    .menu-btn span::before {
+        transform: translateY(-5px)
+    }
+    
+    .menu-btn span::after {
+        transform: translateY(5px)
+    }
+    
+    .menu-btn-active span::before {
+        transform: rotate(-45deg);
+    }
+    
+    .menu-btn-active span::after {
+        transform: rotate(45deg);
+    
+    }
+
+}
+
+@media (min-width: 400px) and (max-width: 850px) {
+    h1{
+        font-size: 16px;
+    }
+
+    .search-wrapper {
+        margin: 10px 0;
+    }
+
+    .search-btn {
+        top: 0px;
+    }
+
+    #search {
+        display: initial;
+    }
+}
+
+@media (max-width: 585px) {
+    #search {
+        display: none;
+    }
 }

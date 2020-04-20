@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
+    <script type="module" src="./js/exchange.js"></script>
+    <script src="./js/menu-btn.js"></script>
     <title>Новостное агенство</title>
 </head>
 <body>
@@ -18,8 +20,12 @@
         </div>
         <div class="lower-bar">
             <div class="center-wrapper clearfix">
+                <button href="#" class="menu-btn">
+                    <span></span>
+                </button>
                 <a href="#" title="Главная страница">
                     <img class="logo" src="./img/logo.png" alt="Логотип новостного агенства">
+                    <img class="logo-mobile" src="./img/logo-mob.png" alt="Логотип новостного агенства для мобильной версии">
                 </a>
 
                 <label for="city-select" class="select-wrapper">
@@ -35,10 +41,13 @@
                     <input class="search-btn" type="submit" value="Начать поиск">
                 </form>
 
-                <span class="temp">+22&deg;C</span>
+                <div class="weather-wrapper">
+                    <time class="date-mobile" datetime="2019-06-19T10:48">19 июня, Вт <span>10:48</span></time>
+                    <span class="temp">+22&deg;C</span>
+                </div>
             </div>
 
-            <nav class="center-wrapper main-nav">
+            <nav class="center-wrapper main-nav main-nav-expand">
                 <ul>
                     <li><a href="#">Главная</a></li>
                     <li><a href="#">Политика</a></li>
@@ -54,191 +63,203 @@
         </div>
     </header>
 
-    <main class="clearfix">
+    <main>
         <div class="center-wrapper">
-            <section class="left-column">
-                <h2>Новости дня</h2>
+            <div class="flex-wrapper">
+                <section class="left-column">
+                    <h2>Новости дня</h2>
 
-                <ul>
-                    <li>
-                        <article class="left-news-wrapper">
-                            <h3>
-                                <a href="#">Кот Ахилл предсказал победу 
-                                    российской сборной над Египтом на 
-                                    ЧМ-2018
-                                </a>
-                            </h3>
-                            <a href="#">ЧМ по футболу</a>
-                            <span>15</span>
-                            <time datetime="10:48">10:48</time>
-                        </article>
-                    </li>
-
-                    <li>
-                        <article class="left-news-wrapper">
-                            <h3>
-                                <a href="#">«Нафтогаз»: суд разрешил
-                                    заморозить активы «Газпрома»
-                                    в Великобритании
-                                </a>
-                            </h3>
-                            <a href="#">Политика</a>
-                            <span>15</span>
-                            <time datetime="10:48">10:48</time>
-                        </article>
-                    </li>
-
-                    <li>
-                        <article class="left-news-wrapper">
-                            <h3>
-                                <a href="#">Минтранс предписал
-                                    оборудовать общественный
-                                    транспорт кондиционерами
-                                </a>
-                            </h3>
-                            <a href="#">Транспорт</a>
-                            <span>15</span>
-                            <time datetime="10:48">10:48</time>
-                        </article>
-                    </li>
-
-                    <li>
-                        <article class="left-news-wrapper">
-                            <h3>
-                                <a href="#">Летние кафе Москвы
-                                    временно&nbsp;закроются из-за
-                                    непогоды
-                                </a>
-                            </h3>
-                            <a href="#">Погода</a>
-                            <span>15</span>
-                            <time datetime="10:48">10:48</time>
-                        </article>
-                    </li>
-
-                    <li>
-                        <article class="left-news-wrapper">
-                            <h3>
-                                <a href="#">Комплексное благоустройство
-                                    Щелковского шоссе завершится
-                                    в июне
-                                </a>
-                            </h3>
-                            <a href="#">Транспорт</a>
-                            <span>15</span>
-                            <time datetime="10:48">10:48</time>
-                        </article>
-                    </li>
-
-                    <li>
-                        <article class="left-news-wrapper">
-                            <h3>
-                                <a href="#">В Москве назвали самое
-                                    популярное мороженое
-                                    у болельщиков ЧМ-2018
-                                </a>
-                            </h3>
-                            <a href="#">ЧМ по футболу</a>
-                            <span>15</span>
-                            <time datetime="10:48">10:48</time>
-                        </article>
-                    </li>
-                </ul>
-
-                <a id="all-news-btn" href="#">Все новости</a>
-            </section>
-
-            <section class="center-column">
-                <h2>Главные новости</h2>
-                <ul>
-                    <li>
-                        <article>
-                            <img src="./img/сrimea.png" alt="Ласточкино гнездо">
-                            <div class="abs-wrapper">
-                                <a href="#">Политика</a>
+                    <ul>
+                        <li>
+                            <article class="left-news-wrapper">
                                 <h3>
-                                    <a href="#">В Крыму отреагировали
-                                        на слова Кравчука
-                                        о возврате полуострова
+                                    <a href="#">Кот Ахилл предсказал победу 
+                                        российской сборной над Египтом на 
+                                        ЧМ-2018
                                     </a>
                                 </h3>
-                                <time datetime="2018-06-19T10:48">19 Июня 2018
-                                    <span>10:48</span>
-                                </time>
-                            </div>
-                        </article>
-                    </li>
+                                <a href="#">ЧМ по футболу</a>
+                                <span>15</span>
+                                <time datetime="10:48">10:48</time>
+                            </article>
+                        </li>
 
-                    <li>
-                        <article class="center-news-wrapper clearfix">
-                            <img src="./img/navalnii.png" alt="Алексей Навальный">
-                            <h3>
-                                <a href="#">Алексей Навальный объявил
-                                    акцию против пенсионной
-                                    реформы 1&nbsp;июля
-                                </a>
-                            </h3>
-                            <a href="#">Политика</a>
-                            <time datetime="10:48">10:48</time>
-                            <span>15</span>
-                        </article>
-                    </li>
+                        <li>
+                            <article class="left-news-wrapper">
+                                <h3>
+                                    <a href="#">«Нафтогаз»: суд разрешил
+                                        заморозить активы «Газпрома»
+                                        в Великобритании
+                                    </a>
+                                </h3>
+                                <a href="#">Политика</a>
+                                <span>15</span>
+                                <time datetime="10:48">10:48</time>
+                            </article>
+                        </li>
 
-                    <li>
-                        <article class="center-news-wrapper clearfix">
-                            <img src="./img/passport.png" alt="Загранпаспорт РФ">
-                            <h3>
-                                <a href="#">Дума увеличила пошлины
-                                    за выдачу загранпаспортов
-                                    и водительских прав
-                                </a>
-                            </h3>
-                            <a href="#">Общество</a>
-                            <time datetime="12:33">12:33</time>
-                            <span>36</span>
-                        </article>
-                    </li>
+                        <li>
+                            <article class="left-news-wrapper">
+                                <h3>
+                                    <a href="#">Минтранс предписал
+                                        оборудовать общественный
+                                        транспорт кондиционерами
+                                    </a>
+                                </h3>
+                                <a href="#">Транспорт</a>
+                                <span>15</span>
+                                <time datetime="10:48">10:48</time>
+                            </article>
+                        </li>
 
-                    <li>
-                        <article class="center-news-wrapper clearfix">
-                            <img src="./img/girl.png" alt="Девушка в наушниках">
-                            <h3>
-                                <a href="#">В России заработал
-                                    стриминговый сервис YouTube
-                                </a>
-                            </h3>
-                            <a href="#">Интернет</a>
-                            <time datetime="11:17">11:17</time>
-                            <span>10</span>
-                        </article>
-                    </li>
+                        <li>
+                            <article class="left-news-wrapper">
+                                <h3>
+                                    <a href="#">Летние кафе Москвы
+                                        временно&nbsp;закроются из-за
+                                        непогоды
+                                    </a>
+                                </h3>
+                                <a href="#">Погода</a>
+                                <span>15</span>
+                                <time datetime="10:48">10:48</time>
+                            </article>
+                        </li>
 
-                    <li>
-                        <article class="center-news-wrapper clearfix">
-                            <img src="./img/keyn.png" alt="Кейн">
-                            <h3>
-                                <a href="#">Кейн признан лучшим
-                                    игроком матча ЧМ-2018
-                                    Тунис — Англия
-                                </a>
-                            </h3>
-                            <a href="#">Политика</a>
-                            <time datetime="10:48">10:48</time>
-                            <span>15</span>
-                        </article>
-                    </li>
-                </ul>
-            </section>
+                        <li>
+                            <article class="left-news-wrapper">
+                                <h3>
+                                    <a href="#">Комплексное благоустройство
+                                        Щелковского шоссе завершится
+                                        в июне
+                                    </a>
+                                </h3>
+                                <a href="#">Транспорт</a>
+                                <span>15</span>
+                                <time datetime="10:48">10:48</time>
+                            </article>
+                        </li>
 
-            <aside>
-                <a href="#">
-                    <img src="./img/banner-1.png" alt="Lexus NX по специальной цене">
-                </a>
+                        <li>
+                            <article class="left-news-wrapper">
+                                <h3>
+                                    <a href="#">В Москве назвали самое
+                                        популярное мороженое
+                                        у болельщиков ЧМ-2018
+                                    </a>
+                                </h3>
+                                <a href="#">ЧМ по футболу</a>
+                                <span>15</span>
+                                <time datetime="10:48">10:48</time>
+                            </article>
+                        </li>
+                    </ul>
 
-                <a href="#">
-                    <img src="./img/banner-2.png" alt="Gym advertising banner">
-                </a>
-            </aside>
+                    <a id="all-news-btn" href="#">Все новости</a>
+
+                    <article class="exchange-wrapper clearfix">
+                        <h3>Курс валют</h3>
+                        <p class="exchange-USD">
+                            <span>&#36;: </span>73,48
+                        </p>
+                        <p class="exchange-EUR">
+                            <span>&#8364;: </span>80,51
+                        </p>
+                    </article>
+                </section>
+
+                <section class="center-column">
+                    <h2>Главные новости</h2>
+                    <ul>
+                        <li>
+                            <article>
+                                <img src="./img/сrimea.png" alt="Ласточкино гнездо">
+                                <div class="abs-wrapper">
+                                    <a href="#">Политика</a>
+                                    <h3>
+                                        <a href="#">В Крыму отреагировали
+                                            на слова Кравчука
+                                            о возврате полуострова
+                                        </a>
+                                    </h3>
+                                    <time datetime="2018-06-19T10:48">19 Июня 2018
+                                        <span>10:48</span>
+                                    </time>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article class="center-news-wrapper clearfix">
+                                <img src="./img/navalnii.png" alt="Алексей Навальный">
+                                <h3>
+                                    <a href="#">Алексей Навальный объявил
+                                        акцию против пенсионной
+                                        реформы 1&nbsp;июля
+                                    </a>
+                                </h3>
+                                <a href="#">Политика</a>
+                                <time datetime="10:48">10:48</time>
+                                <span>15</span>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article class="center-news-wrapper clearfix">
+                                <img src="./img/passport.png" alt="Загранпаспорт РФ">
+                                <h3>
+                                    <a href="#">Дума увеличила пошлины
+                                        за выдачу загранпаспортов
+                                        и водительских прав
+                                    </a>
+                                </h3>
+                                <a href="#">Общество</a>
+                                <time datetime="12:33">12:33</time>
+                                <span>36</span>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article class="center-news-wrapper clearfix">
+                                <img src="./img/girl.png" alt="Девушка в наушниках">
+                                <h3>
+                                    <a href="#">В России заработал
+                                        стриминговый сервис YouTube
+                                    </a>
+                                </h3>
+                                <a href="#">Интернет</a>
+                                <time datetime="11:17">11:17</time>
+                                <span>10</span>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article class="center-news-wrapper clearfix">
+                                <img src="./img/keyn.png" alt="Кейн">
+                                <h3>
+                                    <a href="#">Кейн признан лучшим
+                                        игроком матча ЧМ-2018
+                                        Тунис — Англия
+                                    </a>
+                                </h3>
+                                <a href="#">Политика</a>
+                                <time datetime="10:48">10:48</time>
+                                <span>15</span>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <aside>
+                    <a href="#">
+                        <img src="./img/banner-1.png" alt="Lexus NX по специальной цене">
+                    </a>
+
+                    <a href="#">
+                        <img src="./img/banner-2.png" alt="Gym advertising banner">
+                    </a>
+                </aside>
+            </div>
 
             <section class="bottom-section">
                 <h2>Самые читаемые новости</h2>
@@ -311,7 +332,7 @@
     </main>
 
     <footer>
-        <div class="center-wrapper clearfix">
+        <div class="center-wrapper footer-wrapper">
             <nav class="bottom-nav">
                 <ul>
                     <li><a href="#">Главная</a></li>

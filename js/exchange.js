@@ -1,6 +1,6 @@
 import keys from './keys.js';
 
-// const url = `http://data.fixer.io/api/latest?access_key=${keys.accessKey}&symbols=${keys.currencies}`
+const url = `http://data.fixer.io/api/latest?access_key=${keys.accessKey}&symbols=${keys.currencies}`
 
 const renderExchange = (data) => {
     const usdContainer = document.querySelector('.exchange-USD');
